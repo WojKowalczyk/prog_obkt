@@ -1,21 +1,16 @@
-import math
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-class Punkt:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    @staticmethod
-    def distance(p1, p2):
-        return math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-def main():
-    punkt_a = Punkt(0, 2)
-    punkt_b = Punkt(0, 3)
-    print(Punkt.distance(p1, p2))
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
 
-
-if __name__=="__main__":
-    main()
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
