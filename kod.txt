@@ -1,0 +1,51 @@
+public class MyClass {
+    static int countChar(String str, char c){
+        int ile = 0;
+        for(int i = 0; i < length(str); i++){
+            if(str[i] == 'c'){
+                ile++;
+            }
+        }
+        return ile;
+    }
+    static int countSubStr(String str, String substr){
+        int ile = 0;
+        for(int i = 0; i < length(str); i++){
+            int p = i;
+            if(str[i] == substr[i]){
+                for(p; p < length(substr); p++){
+                    if(str[p] != substr[p]){
+                        return 0;
+                    }
+                    else{
+                        ile++;
+                    }
+                }
+            }
+        }
+    }
+    static String middle(String str){
+        int dlugosc = length(str);
+        String srodek = "";
+        if(dlugosc % 2 != 0){
+            dlugosc /= 2;
+            srodek = str[dlugosc];
+            return srodek;
+        }
+        else{
+            return "";
+        }
+    }
+    static String repeat(String str, int n){
+        StringBuilder stringBuilder = new StringBuilder(100);
+        stringBuilder.append(str);
+        for(int i = 0; i < n; i++){
+            stringBuilder.append(str);
+        }
+        return stringBuilder.toString();
+    }
+    public static void main(String args[]) {
+      String napis = "cabcccbabacc";
+      System.out.print(countChar(napis, "c"));
+    }
+}
